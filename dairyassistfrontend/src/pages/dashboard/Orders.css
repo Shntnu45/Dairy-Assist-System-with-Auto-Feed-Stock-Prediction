@@ -1,0 +1,97 @@
+.orders-page {
+  padding: 24px;
+  max-width: 900px;
+}
+
+.orders-page h1 {
+  margin-bottom: 20px;
+  color: #2c5530;
+}
+
+.orders-empty {
+  text-align: center;
+  padding: 48px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.orders-empty p {
+  margin-bottom: 16px;
+  color: #666;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-card {
+  padding: 20px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.order-id {
+  font-weight: bold;
+  color: #2c5530;
+}
+
+.order-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+}
+
+.order-details p {
+  margin: 4px 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.view-order {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: #2c5530;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.view-order:hover {
+  background: #1e3a21;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-bottom: 16px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #2c5530;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}

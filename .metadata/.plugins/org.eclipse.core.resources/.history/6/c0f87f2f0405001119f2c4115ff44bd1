@@ -1,0 +1,41 @@
+package com.Dairy.assist.entity;
+
+import jakarta.persistence.*;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "feed_reorders")
+public class FeedReorder {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long reorderId;
+
+    private Double quantityRequested; 
+
+    private LocalDateTime requestDate;
+    
+    @Enumerated(EnumType.STRING)
+    private ReorderStatus status;
+
+    @Column(columnDefinition = "TEXT")
+    private String notes;
+
+    public void setQuantityRequested(Double quantityRequested) {
+        this.quantityRequested = quantityRequested;
+    }
+
+    public Double getQuantityRequested() {
+        return quantityRequested;
+    }
+
+    // Keep your other existing getters and setters...
+    public Long getReorderId() { return reorderId; }
+    public void setReorderId(Long reorderId) { this.reorderId = reorderId; }
+    public LocalDateTime getRequestDate() { return requestDate; }
+    public void setRequestDate(LocalDateTime requestDate) { this.requestDate = requestDate; }
+    public ReorderStatus getStatus() { return status; }
+    public void setStatus(ReorderStatus status) { this.status = status; }
+    public String getNotes() { return notes; }
+    public void setNotes(String notes) { this.notes = notes; }
+}

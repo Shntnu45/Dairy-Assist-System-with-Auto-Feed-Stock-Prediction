@@ -1,0 +1,58 @@
+.checkout-page {
+  padding: 24px;
+  max-width: 600px;
+}
+
+.checkout-page h1 {
+  margin-bottom: 20px;
+}
+
+.checkout-section {
+  margin-bottom: 24px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.checkout-section h2 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.address-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.pay-btn {
+  padding: 12px 24px;
+  background: #2c5530;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.pay-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.checkout-empty {
+  padding: 40px;
+  text-align: center;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-bottom: 16px;
+}

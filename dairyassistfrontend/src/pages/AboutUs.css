@@ -1,0 +1,220 @@
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-main {
+  flex: 1;
+}
+
+.about-header {
+  text-align: center;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  color: #2c5530;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.intro-content h2 {
+  font-size: 2rem;
+  color: #2c5530;
+  margin-bottom: 1.5rem;
+}
+
+.intro-content p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.intro-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  font-size: 6rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.mission-vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 3rem 0;
+  background: #f8f9fa;
+  margin: 2rem -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 12px;
+}
+
+.mission h3,
+.vision h3 {
+  font-size: 1.5rem;
+  color: #2c5530;
+  margin-bottom: 1rem;
+}
+
+.mission p,
+.vision p {
+  color: #666;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.values {
+  padding: 4rem 0;
+}
+
+.values h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c5530;
+  margin-bottom: 3rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.value-card h4 {
+  font-size: 1.2rem;
+  color: #2c5530;
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.features-overview {
+  padding: 4rem 0;
+  background: #f8f9fa;
+  margin: 2rem -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 12px;
+}
+
+.features-overview h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c5530;
+  margin-bottom: 3rem;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.feature-item h4 {
+  color: #2c5530;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.feature-item p {
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about-intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .mission-vision {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-header h1 {
+    font-size: 2rem;
+  }
+  
+  .intro-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .image-placeholder {
+    font-size: 4rem;
+    padding: 1.5rem;
+  }
+  
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+}

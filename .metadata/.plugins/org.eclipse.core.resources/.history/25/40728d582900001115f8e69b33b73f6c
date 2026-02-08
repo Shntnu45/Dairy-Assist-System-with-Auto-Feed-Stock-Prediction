@@ -1,0 +1,5 @@
+package com.Dairy.assist.dto;
+
+public class DeliveryResponse {
+
+}

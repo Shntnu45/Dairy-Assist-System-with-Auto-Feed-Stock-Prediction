@@ -1,0 +1,151 @@
+.google-map-picker {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.map-search-container {
+  margin-bottom: 10px;
+}
+
+.map-search-input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.map-search-input:focus {
+  border-color: #2c5530;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.map-info {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.location-info p {
+  margin: 5px 0;
+}
+
+.address-text {
+  font-size: 14px;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.coordinates {
+  font-size: 12px;
+  color: #666;
+  font-family: monospace;
+}
+
+.map-error {
+  padding: 20px;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  color: #856404;
+}
+
+.map-error code {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  background: #fff;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .map {
+    height: 300px !important;
+  }
+}
+
+/* Simple Address Picker Styles */
+.simple-address-picker {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.address-input-section {
+  margin-bottom: 16px;
+}
+
+.address-input-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.address-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.address-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.location-actions {
+  margin-bottom: 16px;
+}
+
+.get-location-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.get-location-btn:hover {
+  background: #218838;
+}
+
+.location-info {
+  font-size: 12px;
+  color: #666;
+  padding: 8px;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}

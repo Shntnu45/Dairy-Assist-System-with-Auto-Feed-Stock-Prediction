@@ -1,0 +1,38 @@
+package com.Dairy.assist.service.impl;
+
+import com.Dairy.assist.dto.AdminOrderResponse;
+import com.Dairy.assist.dto.ApiResponse;
+import com.Dairy.assist.entity.Order;
+import com.Dairy.assist.repository.OrderRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+public class AdminOrderService {
+
+    @Autowired 
+    private OrderRepository orderRepository;
+
+    // FIX: Change return type to match the Controller
+    @Transactional(readOnly = true)
+    public ApiResponse<List<AdminOrderResponse>> getAllOrders() {
+        List<Order> orders = orderRepository.findAll();
+        
+        // Convert the Order Entity list to AdminOrderResponse DTO list
+        List<AdminOrderResponse> response = orders.stream().map(order -> new AdminOrderResponse(
+                order.getOrderId(),
+                order.getUser() != null ? order.getUser().getName() : "Unknown Customer",
+                order.getTotalAmount(),
+                order.getStatus(),
+                order.getOrderDate()
+        )).collect(Collectors.toList());
+
+        return ApiResponse.success("Admin orders fetched successfully", response);
+    }
+    
+    // ... rest of your methods (getOrderById, updateStatus, etc.)
+}

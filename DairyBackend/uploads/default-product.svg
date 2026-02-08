@@ -1,0 +1,5 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="200" fill="#F5F5F5"/>
+<path d="M100 70C108.284 70 95.284 70 100 70ZM100 70V130M100 130H130M100 130H70M130 130L115 115M170 85L155 100L130 130M70 130L85 115M30 85L45 100L70 130" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="100" y="160" text-anchor="middle" fill="#6B7284" font-family="Arial" font-size="14">Dairy Product</text>
+</svg>

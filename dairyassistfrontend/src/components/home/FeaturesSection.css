@@ -1,0 +1,140 @@
+.why-choose-us-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2c5530; /* Your Brand Dark Green */
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.sub-heading {
+  color: #666;
+  margin-bottom: 60px;
+  font-size: 1.1rem;
+}
+
+.content-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 350px; /* Large horizontal gap for the center image */
+  width: 100%;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: scale(1.02);
+}
+
+/* Align text for left-side features */
+.feature-card.left {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* Align text for right-side features */
+.feature-card.right {
+  flex-direction: row;
+  text-align: left;
+}
+
+.icon-wrapper {
+  background: #f0fdf4;
+  border: 2px dashed #28a745; /* Your Vibrant Green */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+}
+
+.text-wrapper h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.text-wrapper p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Central Image Styling */
+.floating-image-container {
+  position: absolute;
+  width: 300px;
+  z-index: 10;
+}
+
+.center-img {
+  width: 100%;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .features-grid {
+    gap: 40px 150px;
+  }
+  .floating-image-container {
+    width: 200px;
+  }
+}
+
+@media (max-width: 850px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .floating-image-container {
+    position: relative;
+    margin-bottom: 40px;
+    order: -1; /* Puts image at the top on mobile */
+  }
+
+  .feature-card.left, .feature-card.right {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+  }
+}

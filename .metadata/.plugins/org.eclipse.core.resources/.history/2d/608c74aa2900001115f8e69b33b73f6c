@@ -1,0 +1,39 @@
+package com.Dairy.assist.service.impl;
+
+import com.Dairy.assist.dto.ApiResponse;
+import com.Dairy.assist.dto.DeliveryResponse; // Import new DTO
+import com.Dairy.assist.entity.Delivery;
+import com.Dairy.assist.entity.DeliveryStatus;
+import com.Dairy.assist.repository.DeliveryRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+public class AdminDeliveryService {
+
+    @Autowired
+    private DeliveryRepository deliveryRepository;
+
+    @Transactional(readOnly = true) // Crucial for session management
+    public ApiResponse<List<DeliveryResponse>> getAllDeliveries() {
+        List<Delivery> deliveries = deliveryRepository.findAll();
+        
+        List<DeliveryResponse> response = deliveries.stream().map(d -> new DeliveryResponse(
+            d.getDeliveryId(),
+            d.getOrder() != null ? d.getOrder().getOrderId() : null,
+            (d.getOrder() != null && d.getOrder().getUser() != null) ? d.getOrder().getUser().getName() : "N/A",
+            (d.getOrder() != null && d.getOrder().getUser() != null) ? d.getOrder().getUser().getPhone() : "N/A",
+            d.getOrder() != null && d.getOrder().getDeliveryAddress() != null ? 
+                d.getOrder().getDeliveryAddress().getStreet() + ", " + d.getOrder().getDeliveryAddress().getCity() : "No Address",
+            d.getStatus(),
+            d.getAssignedDate() != null ? d.getAssignedDate() : d.getOrder().getOrderDate()
+        )).collect(Collectors.toList());
+
+        return ApiResponse.success("All deliveries", response);
+    }
+    // ... keep other methods
+}

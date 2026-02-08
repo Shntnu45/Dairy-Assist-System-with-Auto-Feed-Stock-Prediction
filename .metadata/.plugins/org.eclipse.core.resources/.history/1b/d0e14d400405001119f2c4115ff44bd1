@@ -1,0 +1,57 @@
+package com.Dairy.assist.entity;
+
+import jakarta.persistence.*;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "feed_reorders")
+public class FeedReorder {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long reorderId;
+
+    // Field for AdminFeedService (Line 80)
+    private Double quantityToOrder;
+
+    // Field for FeedSchedulerService (Line 66)
+    private Double quantityRequested;
+
+    private LocalDateTime requestDate;
+    
+    @Enumerated(EnumType.STRING)
+    private ReorderStatus status;
+
+    // Field for AdminFeedService (Line 120)
+    private LocalDateTime adminActionDate;
+
+    @Column(columnDefinition = "TEXT")
+    private String notes;
+
+    // --- Getters and Setters for AdminFeedService ---
+
+    public Double getQuantityToOrder() { return quantityToOrder; }
+    public void setQuantityToOrder(Double quantityToOrder) { this.quantityToOrder = quantityToOrder; }
+
+    public LocalDateTime getAdminActionDate() { return adminActionDate; }
+    public void setAdminActionDate(LocalDateTime adminActionDate) { this.adminActionDate = adminActionDate; }
+
+    // --- Getters and Setters for FeedSchedulerService ---
+
+    public Double getQuantityRequested() { return quantityRequested; }
+    public void setQuantityRequested(Double quantityRequested) { this.quantityRequested = quantityRequested; }
+
+    // --- Standard Getters and Setters ---
+
+    public Long getReorderId() { return reorderId; }
+    public void setReorderId(Long reorderId) { this.reorderId = reorderId; }
+
+    public LocalDateTime getRequestDate() { return requestDate; }
+    public void setRequestDate(LocalDateTime requestDate) { this.requestDate = requestDate; }
+
+    public ReorderStatus getStatus() { return status; }
+    public void setStatus(ReorderStatus status) { this.status = status; }
+
+    public String getNotes() { return notes; }
+    public void setNotes(String notes) { this.notes = notes; }
+}

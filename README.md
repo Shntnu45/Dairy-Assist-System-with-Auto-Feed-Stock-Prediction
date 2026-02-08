@@ -476,9 +476,9 @@ Contributions are welcome! Please follow these steps:
 ## 📞 Contact
 
 
-- 📧 Email: your.email@example.com
-- 💼 GitHub: [@yourusername](https://github.com/yourusername)
-- 💼 LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- 📧 Email: shantanu.chaudhari.cmaug@gmail.com
+- 💼 GitHub: https://github.com/Shntnu45
+- 💼 LinkedIn:https://www.linkedin.com/in/shantanu-chaudhari-2404b8238/
 
 ---
 
@@ -499,7 +499,6 @@ If you find this project helpful, please give it a ⭐ on GitHub!
 
 ## 📈 Future Enhancements
 
-- [ ] Mobile app (React Native)
 - [ ] Real-time order tracking with maps
 - [ ] Subscription-based ordering
 - [ ] Multi-language support

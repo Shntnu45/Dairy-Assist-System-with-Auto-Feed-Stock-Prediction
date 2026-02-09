@@ -17,7 +17,7 @@ const GoogleMapPicker = ({ onLocationSelect, initialLat, initialLng, addressLine
   useEffect(() => {
     const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
     
-    if (!apiKey || apiKey === 'YOUR_GOOGLE_MAPS_API_KEY' || apiKey.includes('AQ.Ab8RN6Jkr0NnsrI0oN2oMeRFWGEeXhOKGAwq1mMgNgx79eE1mg')) {
+    if (!apiKey || apiKey === 'YOUR_GOOGLE_MAPS_API_KEY' || apiKey.includes('Add your key')) {
       if (import.meta.env.DEV) {
         console.warn('Google Maps API key is not configured or invalid. Please set VITE_GOOGLE_MAPS_API_KEY in your .env file.');
       }
